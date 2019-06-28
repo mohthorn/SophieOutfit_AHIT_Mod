@@ -54,13 +54,13 @@ static function SetCostume(Actor a, bool b)
 			if (gp.SkeletalMeshComponent.SkeletalMesh == gp.default.OneMeshBowKid)
 			{
 				gp.SkeletalMeshComponent.SetSkeletalMesh(SkeletalMesh'AtelierSophieOutfit.SophieBKGP');
-				gp.SkeletalMeshComponent.SetMaterial(0, Material'HatInTime_Characters_Coop.Materials.CoopCharacter_Hair');
-				gp.SkeletalMeshComponent.SetMaterial(1, Material'AtelierSophieOutfit.Materials.CoopCharacter_Diffuse_NoShadow');
-				gp.SkeletalMeshComponent.SetMaterial(2, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.Expression_BowKid_Animated');
-				gp.SkeletalMeshComponent.SetMaterial(3, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.BowKid_Eyes_Animated');
-				gp.SkeletalMeshComponent.SetMaterial(4, Material'HatInTime_Costumes2.Materials.VanessaOutfit_Diffuse');
-				gp.SkeletalMeshComponent.SetMaterial(5, Material'AtelierSophieOutfit.Materials.Boots_Diffuse');
-				gp.SkeletalMeshComponent.SetMaterial(6, Material'HatInTime_Characters_HatKid.Materials.HatKid_Costume_Hands');
+				gp.SkeletalMeshComponent.SetMaterial(0, Material'HatInTime_Characters_Coop.Materials.CoopCharacter_Diffuse');
+				gp.SkeletalMeshComponent.SetMaterial(1, Material'HatInTime_Characters_Coop.Materials.CoopCharacter_Hair');
+				gp.SkeletalMeshComponent.SetMaterial(2, Material'AtelierSophieOutfit.Materials.CoopCharacter_Diffuse_NoShadow');
+				gp.SkeletalMeshComponent.SetMaterial(3, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.Expression_BowKid_Animated');
+				gp.SkeletalMeshComponent.SetMaterial(4, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.BowKid_Eyes_Animated');
+				gp.SkeletalMeshComponent.SetMaterial(5, Material'AtelierSophieOutfit.Materials.VanessaOutfit_Diffuse_BK');
+				gp.SkeletalMeshComponent.SetMaterial(6, Material'AtelierSophieOutfit.Materials.Boots_Diffuse');
 				gp.SkeletalMeshComponent.SetMaterial(7, Material'AtelierSophieOutfit.Materials.BowKidMain');
 				gp.SkeletalMeshComponent.SetMaterial(8, Material'AtelierSophieOutfit.Materials.Skirt_Inner');
             }
