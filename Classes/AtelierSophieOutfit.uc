@@ -43,44 +43,46 @@ static function Removed(Actor a)
 static function SetCostume(Actor a, bool b)
 {
 	local bool IsBowKid;
-
+	local Hat_GhostPartyPlayer gp;	
+	
 	`if(`isdefined(WITH_GHOSTPARTY))
 	if (a.IsA('Hat_GhostPartyPlayer'))
 	{
+		gp = Hat_GhostPartyPlayer(a);
 		if (b)
 		{
-			if (Hat_GhostPartyPlayer(a).PlayerState.SubID > 0)
+			if (gp.SkeletalMeshComponent.SkeletalMesh == gp.default.OneMeshBowKid)
 			{
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetSkeletalMesh(SkeletalMesh'AtelierSophieOutfit.SophieBKGP');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(0, Material'HatInTime_Characters_Coop.Materials.CoopCharacter_Hair');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(1, Material'AtelierSophieOutfit.Materials.CoopCharacter_Diffuse_NoShadow');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(2, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.Expression_BowKid_Animated');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(3, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.BowKid_Eyes_Animated');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(4, Material'HatInTime_Costumes2.Materials.VanessaOutfit_Diffuse');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(5, Material'AtelierSophieOutfit.Materials.Boots_Diffuse');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(6, Material'HatInTime_Characters_HatKid.Materials.HatKid_Costume_Hands');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(7, Material'AtelierSophieOutfit.Materials.BowKidMain');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(8, Material'AtelierSophieOutfit.Materials.Skirt_Inner');
+				gp.SkeletalMeshComponent.SetSkeletalMesh(SkeletalMesh'AtelierSophieOutfit.SophieBKGP');
+				gp.SkeletalMeshComponent.SetMaterial(0, Material'HatInTime_Characters_Coop.Materials.CoopCharacter_Hair');
+				gp.SkeletalMeshComponent.SetMaterial(1, Material'AtelierSophieOutfit.Materials.CoopCharacter_Diffuse_NoShadow');
+				gp.SkeletalMeshComponent.SetMaterial(2, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.Expression_BowKid_Animated');
+				gp.SkeletalMeshComponent.SetMaterial(3, MaterialInstanceTimeVarying'HatInTime_Characters_Coop.Expressions.Material.BowKid_Eyes_Animated');
+				gp.SkeletalMeshComponent.SetMaterial(4, Material'HatInTime_Costumes2.Materials.VanessaOutfit_Diffuse');
+				gp.SkeletalMeshComponent.SetMaterial(5, Material'AtelierSophieOutfit.Materials.Boots_Diffuse');
+				gp.SkeletalMeshComponent.SetMaterial(6, Material'HatInTime_Characters_HatKid.Materials.HatKid_Costume_Hands');
+				gp.SkeletalMeshComponent.SetMaterial(7, Material'AtelierSophieOutfit.Materials.BowKidMain');
+				gp.SkeletalMeshComponent.SetMaterial(8, Material'AtelierSophieOutfit.Materials.Skirt_Inner');
             }
             else
             {
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetSkeletalMesh(SkeletalMesh'AtelierSophieOutfit.SophieHKGP');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(0, Material'HatInTime_Costumes2.Materials.VanessaOutfit_Diffuse');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(1, Material'AtelierSophieOutfit.Materials.Boots_Diffuse');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(2, Material'HatInTime_Characters_HatKid.Materials.HatKid_Costume_Hands');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(3, Material'AtelierSophieOutfit.Materials.HatkidMain');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(4, Material'AtelierSophieOutfit.Materials.Skirt_Inner');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(5, MaterialInstanceTimeVarying'HatInTime_Characters_HatKid.Expressions.Material.Expression_HatKid_Animated');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(6, Material'HatInTime_Characters_HatKid.Materials.HatKidBody');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(7, Material'HatInTime_Characters_HatKid.Materials.HatKidHair');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(8, Material'HatInTime_Characters_HatKid.Materials.HatKidHair');
-				Hat_GhostPartyPlayer(a).SkeletalMeshComponent.SetMaterial(9, MaterialInstanceTimeVarying'HatInTime_Characters_HatKid.Expressions.Material.HatKid_Eyes_Animated');
+				gp.SkeletalMeshComponent.SetSkeletalMesh(SkeletalMesh'AtelierSophieOutfit.SophieHKGP');
+				gp.SkeletalMeshComponent.SetMaterial(0, Material'HatInTime_Costumes2.Materials.VanessaOutfit_Diffuse');
+				gp.SkeletalMeshComponent.SetMaterial(1, Material'AtelierSophieOutfit.Materials.Boots_Diffuse');
+				gp.SkeletalMeshComponent.SetMaterial(2, Material'HatInTime_Characters_HatKid.Materials.HatKid_Costume_Hands');
+				gp.SkeletalMeshComponent.SetMaterial(3, Material'AtelierSophieOutfit.Materials.HatkidMain');
+				gp.SkeletalMeshComponent.SetMaterial(4, Material'AtelierSophieOutfit.Materials.Skirt_Inner');
+				gp.SkeletalMeshComponent.SetMaterial(5, MaterialInstanceTimeVarying'HatInTime_Characters_HatKid.Expressions.Material.Expression_HatKid_Animated');
+				gp.SkeletalMeshComponent.SetMaterial(6, Material'HatInTime_Characters_HatKid.Materials.HatKidBody');
+				gp.SkeletalMeshComponent.SetMaterial(7, Material'HatInTime_Characters_HatKid.Materials.HatKidHair');
+				gp.SkeletalMeshComponent.SetMaterial(8, Material'HatInTime_Characters_HatKid.Materials.HatKidHair');
+				gp.SkeletalMeshComponent.SetMaterial(9, MaterialInstanceTimeVarying'HatInTime_Characters_HatKid.Expressions.Material.HatKid_Eyes_Animated');
 
             }
 		}
 		else
 		{
-			Hat_GhostPartyPlayer(a).SetPlayerVisual();
+			gp.SetPlayerVisual();
 		}
 		return;
 	}
